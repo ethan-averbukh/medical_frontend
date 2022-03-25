@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# **RateTheDoc**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## **Project Description**
+A web application for users to come and search for or post reviews on doctors in their area. 
 
-In the project directory, you can run:
+## **User Stories**
+User can come to the website immediately begin to search for a doctor based on doctor type and location. Information shown about a doctor will be: Wait Time, Bedside Manner, Time spent with patient, Problem resolved, and/or a brief comment.
+If the user wishes to leave a review they are able to create an account and post reviews about doctors already reviewed or create a brand new review about a doctor.
+A User who has created an account will then be able update, and delete their reviews as well.
 
-### `npm start`
+## **Project Schedule**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Day      | Deliverable       | Status     |
+| -------- | ----------------- | ---------- |
+| Day 1 | Complete Worksheet | Incomplete
+| Day 1 | Get reviewed and approved | Incomplete
+| Day 1 | Setup React Native Environment | Incomplete
+| Day 2 | Begin Component Structure | Incomplete
+| Day 2 | Finish UI without submission handling | Incomplete
+| Day 3 | API's (GraphQL-Express) | Incomplete
+| Day 4 | API integration into submission handling | Incomplete
+| Day 4 | Backend Setup (MongoDB) | Incomplete
+| Day 5 | Testing | Incomplete
+| Day 5 | Testing | Incomplete
+| Day 6 | Testing | Incomplete
+| Day 7 | Presentation | Incomplete
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## **Wireframes**
 
-### `npm run build`
+[Mobile](https://imgur.com/yB3V9AB)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[React Architecture](https://imgur.com/yB3V9AB)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## **MVP/Post MVP**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+#### **MVP**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Priority     | Components       | Estimated Time     |
+| -------- | ----------------- | ---------- |
+| Day 1 | Home | 5 hr
+| Day 1 | Nav | 1 hr
+| Day 1 | Footer | 1 hr
+| Day 2 | API's | 10 hr
+| Day 3 | Linkage API to Submissions | 5 hr
+| Day 4 | API integration into submission handling | 10 hr
+| Day 4 | Database | 8 hr
+| Day 1-6 | Testing | Unknown
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### **PostMVP**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Improving User Experience by smoothing out responsiveness and design
+- User accounts
+- Increased Search filtration
+- 
 
-## Learn More
+## **Functional Components**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## **Additional Libraries**
 
-### Code Splitting
+- Frontend: React-Bootstrap, Sass
+- API: Express, GraphQL
+- Backend: Mongoose
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## **Code Snippets**
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Sources Used for Inspiration
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## **Issues and Resolutions**
