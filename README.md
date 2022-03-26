@@ -13,9 +13,9 @@ A User who has created an account will then be able update, and delete their rev
 
 | Day      | Deliverable       | Status     |
 | -------- | ----------------- | ---------- |
-| Day 1 | Complete Worksheet | Incomplete
-| Day 1 | Get reviewed and approved | Incomplete
-| Day 1 | Setup React Native Environment | Incomplete
+| Day 1 | Complete Worksheet | Complete
+| Day 1 | Get reviewed and approved | Complete
+| Day 1 | Setup ReactJS Environment | Complete
 | Day 2 | Begin Component Structure | Incomplete
 | Day 2 | Finish UI without submission handling | Incomplete
 | Day 3 | API's (GraphQL-Express) | Incomplete
