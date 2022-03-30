@@ -1,0 +1,24 @@
+
+
+.nav {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    grid-gap: 1px;
+    &-brand {
+        grid-column: 1/2;
+    }
+    &-links {
+        grid-column: 3/5;
+    }
+    &-link {
+        &-0 {
+            padding:10px;
+        }
+        &-1 {
+            padding: 10px;
+        }
+        &-2 {
+            padding:10px;
+        }
+    }
+}

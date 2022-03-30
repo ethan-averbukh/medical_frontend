@@ -1,0 +1,22 @@
+.nav {
+  display: grid;
+  grid-template: 1fr/1fr 1fr 1fr;
+  grid-gap: 1px;
+}
+.nav-brand {
+  grid-column: 1/2;
+}
+.nav-links {
+  grid-column: 3/5;
+}
+.nav-link-0 {
+  padding: 10px;
+}
+.nav-link-1 {
+  padding: 10px;
+}
+.nav-link-2 {
+  padding: 10px;
+}
+
+/*# sourceMappingURL=index.css.map */
