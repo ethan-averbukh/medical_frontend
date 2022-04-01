@@ -4,7 +4,7 @@ import axios from 'axios';
 //Journal API Calls
 
 const postJournalAPICall = async (journal) => {
-    const journal = await axios.post("http://localhost:3000/Journal", {
+    const journalPost = await axios.post("http://localhost:3000/Journals", {
         "title": journal.title,
         "Date": journal.Date,
         "Notes": journal.Notes
@@ -12,7 +12,7 @@ const postJournalAPICall = async (journal) => {
 }
 
 const putJournalAPICall = async (journal) => {
-    const journal = await axios.put(`http://localhost:3000/Journal/${journal._id}`)
+    const journalPost = await axios.put(`http://localhost:3000/Journals/${journal._id}`)
 }
 
 
