@@ -4,12 +4,12 @@ import { useNavigate } from 'react-router';
 const JournalComponent = ({journalEntries}) => {
     const navigate = useNavigate();
     let listofEntries;
-    const [newEntries, setNewEntry] = useState([]);
+    const [newEntries, setNewEntries] = useState([]);
     const [newEntryCount, setNewEntryCount] = useState(0);
 
     useEffect(()=>{
         if(journalEntries){
-            setNewEntry(journalEntries);
+            setNewEntries(journalEntries);
         }
         console.log(newEntries)
       
