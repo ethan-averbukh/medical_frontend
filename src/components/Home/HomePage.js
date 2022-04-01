@@ -5,6 +5,7 @@ import JournalComponent from "../Journal/Journal";
 import NotesComponent from "../Notes/Notes";
 
 import { useEffect, useState } from "react";
+import IntroComponent from "./IntroductionPage";
 
 const HomePageComponent = () => {
   const [journalEntry, setJournalEntry] = useState({})
@@ -31,6 +32,7 @@ const HomePageComponent = () => {
   return (
     <div>
       <NavBarComponent />
+      <IntroComponent />
       <Routes>
         <Route
           path="/Notes"
