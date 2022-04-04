@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import { convertDate } from "../../TimeConverter";
-import { getJournalAPICall } from "../../apis/journalsAPI";
 
 import NotesList from "../Notes/createNotes";
 const JournalComponent = ({ journalEntry }) => {
@@ -17,7 +15,6 @@ const JournalComponent = ({ journalEntry }) => {
     <div className="accordion" id="Accordion">
       {journalEntry &&
         journalEntry.map((item, index) => {
-          console.log(item);
           return (
             <div className="accordion-item " key={item._id}>
               <h2 className="accordion-header" id={`Journal${index}`}>

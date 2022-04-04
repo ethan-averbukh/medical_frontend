@@ -1,11 +1,11 @@
 import React from 'react'
 import { useState } from "react";
-// import { useNavigate } from "react-router";
-import { postJournalAPICall } from "../../apis/journalsAPI";
+import { useNavigate } from "react-router";
+import { postJournalAPICall } from "./../../apis/journalsAPI";
 import strings from './../../strings.json';
 
 const NewJournal = () => {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     const [newJournal, setNewJournal] = useState({
         "title": "",
         "date": new Date().toDateString(),
@@ -16,7 +16,7 @@ const NewJournal = () => {
         event.preventDefault();
         postJournalAPICall(newJournal);
         setNoJournalEntryExists(false);
-        // navigate('/Journals')
+        navigate('/home')
     }
     const handleChange = (event) => {
         setNewJournal((prevState)=>{
@@ -31,8 +31,8 @@ const NewJournal = () => {
 
   return (
     <div>
-        {noJournalEntryExists && <p>{strings.noJournalEntries}</p>}
-        <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#journalModal">{strings.newJournal}</button> 
+        {noJournalEntryExists && <div className='intro-no-jrnls'>{strings.noJournalEntries}</div>}
+        <button type="button" className="btn btn-primary new-journal" data-bs-toggle="modal" data-bs-target="#journalModal">{strings.newJournal}</button> 
         <div className="modal fade" id="journalModal" tabIndex={-1} aria-labelledby="journalModalLabel" aria-hidden={true}>
             <div className="modal-dialog modal-dialog-centered">
                 <div className="modal-content">
