@@ -14,7 +14,6 @@ const JournalComponent = () => {
     // }
   }, [lengthOfJournalEntries]);
 
-  const checkJournalEntriesLength = () => {};
   return (
     <div className="accordion" id="Accordion">
       {manyJournalEntries &&
