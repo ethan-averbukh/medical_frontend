@@ -1,4 +1,5 @@
-import  NewJournal  from "../Journal/NewJournal";
+import  NewJournal  from "./../Journal/NewJournal";
+import GoToJournals from "./../Journal/GoToJournals";
 import strings from './../../strings.json';
 
 const IntroComponent = () => {
@@ -6,10 +7,15 @@ const IntroComponent = () => {
         <div className='intro'>
             
             <h1 className= 'intro-title'>{strings.introTitle}</h1> 
-            <p className= 'intro-description'>
-                {strings.introStatement}
-            </p> 
-            <NewJournal />
+            <div className= 'intro-description'>
+                <p>{strings.introStatement}</p>
+            </div> 
+            <div className="intro-new-journal">
+                <NewJournal />
+            </div>
+            <div className="intro-goto-journals">
+                <GoToJournals />
+            </div>
         </div>
     )
 }
