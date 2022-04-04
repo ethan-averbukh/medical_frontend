@@ -6,28 +6,32 @@
       "date": "04/03/2022",
       "notes": [
         {
-          "Symptom": "Back Pain",
-          "AreaofPain": "Lower back",
-          "Foodsyouatethatday": "Some stuff",
-          "Medications": "Advil, cbd"
+          "date": "04/03/2022",
+          "symptom": "Back Pain",
+          "areaofPain": "Lower back",
+          "dailyFoods": "Some stuff",
+          "medications": "Advil, cbd"
         },
         {
-          "Symptom": "Back Pain",
-          "Area of Pain": "Lower back",
-          "Foodsyouatethatday": "Some stuff",
-          "Medications": "Advil, cbd"
+          "date": "04/03/2022",
+          "symptom": "Back Pain",
+          "areaofPain": "Lower back",
+          "dailyFoods": "Some stuff",
+          "medications": "Advil, cbd"
         },
         {
-          "Symptom": "Back Pain",
-          "AreaofPain": "Lower back",
-          "Foodsyouatethatday": "Some stuff",
-          "Medications": "Advil, cbd"
+          "date": "04/03/2022",
+          "symptom": "Back Pain",
+          "areaofPain": "Lower back",
+          "dailyFoods": "Some stuff",
+          "medications": "Advil, cbd"
         },
         {
-          "Symptom": "Back Pain",
-          "AreaofPain": "Lower back",
-          "Foodsyouatethatday": "Some stuff",
-          "Medications": "Advil, cbd"
+          "date": "04/03/2022",
+          "symptom": "Back Pain",
+          "areaofPain": "Lower back",
+          "dailyFoods": "Some stuff",
+          "medications": "Advil, cbd"
         }
       ]
     },
@@ -37,28 +41,32 @@
         "date": "04/03/2022",
         "notes": [
           {
-            "Symptom": "Neck Pain",
-            "AreaofPain": "Lower Neck",
-            "Foodsyouatethatday": "Some stuff",
-            "Medications": "Advil, cbd"
+            "date": "04/04/2022",
+            "symptom": "Neck Pain",
+            "areaofPain": "Lower Neck",
+            "dailyFoods": "Some stuff",
+            "medications": "Advil, cbd"
           },
           {
-            "Symptom": "Neck Pain",
-            "Area of Pain": "Lower Neck",
-            "Foodsyouatethatday": "Some stuff",
-            "Medications": "Advil, cbd"
+            "date": "04/04/2022",
+            "symptom": "Neck Pain",
+            "areaofPain": "Lower Neck",
+            "dailyFoods": "Some stuff",
+            "medications": "Advil, cbd"
           },
           {
-            "Symptom": "Neck Pain",
-            "AreaofPain": "Lower Neck",
-            "Foodsyouatethatday": "Some stuff",
-            "Medications": "Advil, cbd"
+            "date": "04/04/2022",
+            "symptom": "Neck Pain",
+            "areaofPain": "Lower Neck",
+            "dailyFoods": "Some stuff",
+            "medications": "Advil, cbd"
           },
           {
-            "Symptom": "Neck Pain",
-            "AreaofPain": "Lower Neck",
-            "Foodsyouatethatday": "Some stuff",
-            "Medications": "Advil, cbd"
+            "date": "04/04/2022",
+            "symptom": "Neck Pain",
+            "areaofPain": "Lower Neck",
+            "dailyFoods": "Some stuff",
+            "medications": "Advil, cbd"
           }
         ]
       }
