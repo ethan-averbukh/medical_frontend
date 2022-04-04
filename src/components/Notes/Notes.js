@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import strings from './../../strings.json';
 
 const NotesComponent = ({noteValues}) => {
+  
   const [value, setValue] = useState(0);
   const [newNote, setNewNote] = useState({
     date: new Date().toLocaleString(),
@@ -63,7 +64,7 @@ const NotesComponent = ({noteValues}) => {
                 id="symptom"
                 name="symptom"
                 defaultValue={noteValues.symptom ? noteValues.symptom : ""}
-                onChange={handleChange}
+                onChange={()=>handleChange}
               />
               <label htmlFor="severity">{strings.severity}</label>
               <input

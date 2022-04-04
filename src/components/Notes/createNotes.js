@@ -1,9 +1,10 @@
 import NotesComponent from "./Notes";
 
 export const NotesList = (notes) => {
+
   let notesList = [];
   if (notes != undefined) {
-    notesList = notes.map((item, index) => {
+    notesList = notes.notes.map((item, index) => {
       return (
         <div>
           <button
@@ -29,7 +30,7 @@ export const NotesList = (notes) => {
       </div>
     );
   }
-  return { notesList };
+  return  notesList ;
 };
 
 export default NotesList;
