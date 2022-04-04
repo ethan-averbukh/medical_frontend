@@ -1,0 +1,12 @@
+{
+    "strings": {
+        "introTitle": "Welcome to the Symptom Tracker.",
+        "intoStatement": "A journal app built to alleviate the wasted time a doctor spends typing into his computer.",
+        "noJournalEntries": "You currently have no journal entries, click the button to create one.",
+        "newJournal": "New Journal",
+        "journalTitle": "Journal Title:",
+        "close": "Close",
+        "createJournal": "Create Journal"
+
+    }
+}
