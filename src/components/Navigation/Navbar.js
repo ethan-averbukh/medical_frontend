@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import LogoutButton from "../Login/LogoutButton";
+import LogoutButton from "./../Login/LogoutButton";
 
 const NavBarComponent = () => {
   return (
@@ -22,15 +22,15 @@ const NavBarComponent = () => {
       </div>
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav">
-          <a href="/Notes" className="nav-link">
+          <a href="/home" className="nav-link">
             Notes
           </a>
-          <a href="/Journals" className="nav-link">
+          <a href="/home" className="nav-link">
             Journal
           </a>
-          <a href="/Login" className="nav-link">
+          {/* <a href="/Login" className="nav-link">
             <LogoutButton />
-          </a>
+          </a> */}
         </div>
       </div>
     </nav>
