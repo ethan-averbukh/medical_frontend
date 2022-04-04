@@ -1,6 +1,80 @@
+* {
+  font-family: "BIZ UDGothic", sans-serif;
+}
+
+.home-journal-header {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+.intro {
+  display: grid;
+  grid-template: repeat(4, 1fr)/repeat(3, 1fr);
+}
+.intro-title {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  place-self: center;
+  text-align: center;
+}
+.intro-description {
+  place-self: center;
+  text-align: center;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.intro-nav-journals {
+  display: flex;
+  flex-direction: column;
+}
+.intro-nav-journals .btn {
+  place-self: center;
+  margin-top: 10px;
+}
+.intro-new-journal {
+  place-self: center;
+  text-align: center;
+  grid-column: 3/4;
+  grid-row: 4/5;
+  display: flex;
+  flex-direction: column;
+}
+@keyframes slide-left {
+  from {
+    margin-left: 200%;
+    width: 300%;
+  }
+  to {
+    margin-left: 20%;
+    width: 100%;
+  }
+}
+.intro-goto-journals {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  justify-self: center;
+  align-self: end;
+}
+
+.btn.new-journal {
+  display: inline-block;
+}
+
 .notes-form {
   display: flex;
   flex-direction: column;
+}
+
+.btn {
+  display: flex;
+  text-align: start;
+}
+.btn h4 {
+  padding: 10px;
+}
+.btn h5 {
+  padding: 10px;
 }
 
 /*# sourceMappingURL=index.css.map */

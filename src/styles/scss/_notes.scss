@@ -4,3 +4,14 @@
         flex-direction: column;
     }
 }
+
+.btn {
+    display:flex;
+    text-align: start;
+    & h4 {
+       padding: 10px; 
+    }
+    & h5 {
+        padding: 10px;
+    }
+}

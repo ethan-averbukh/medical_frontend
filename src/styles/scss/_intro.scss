@@ -1,0 +1,52 @@
+
+.intro {
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(3,1fr);
+    
+    &-title {
+        grid-column: 1/4;
+        grid-row: 1/2;
+        place-self: center;
+        text-align: center;
+    }
+    &-description {
+        place-self: center;
+        text-align: center;
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    &-nav-journals {
+        display:flex;
+        flex-direction: column;
+        & .btn {
+            place-self: center;
+            margin-top: 10px;
+        }
+        
+    }
+    &-new-journal {
+        place-self: center;
+        text-align: center;
+        grid-column: 3/4;
+        grid-row: 4/5;
+        display: flex;
+        flex-direction: column;
+    }
+    @keyframes slide-left {
+        from {
+            margin-left:200%;
+            width:300%;
+        }
+        to {
+            margin-left:20%;
+            width:100%;
+        }
+    }
+
+    &-goto-journals {
+        grid-column: 1/2;
+        grid-row: 4/5;
+        justify-self: center;
+        align-self: end;
+    }
+}
