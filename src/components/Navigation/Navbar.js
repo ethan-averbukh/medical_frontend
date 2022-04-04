@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
+import LogoutButton from "../Login/LogoutButton";
 
 const NavBarComponent = () => {
   return (
     <nav className="navbar navbar-expand-md navbar-light bg-light">
       <div className="container-fluid">
-        <Link to="/" className=" navbar-brand">
+        <a href="/" className=" navbar-brand">
           Home
-        </Link>
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -21,12 +22,15 @@ const NavBarComponent = () => {
       </div>
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav">
-          <Link to="/Notes" className="nav-link">
+          <a href="/Notes" className="nav-link">
             Notes
-          </Link>
-          <Link to="/Journal" className="nav-link">
+          </a>
+          <a href="/Journals" className="nav-link">
             Journal
-          </Link>
+          </a>
+          <a href="/Login" className="nav-link">
+            <LogoutButton />
+          </a>
         </div>
       </div>
     </nav>
