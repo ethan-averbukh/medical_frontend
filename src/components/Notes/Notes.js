@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import strings from './../../strings.json';
 
-const NotesComponent = ({ handleNotesSubmission }) => {
+const NotesComponent = ({noteValues}) => {
   const [value, setValue] = useState(0);
   const [newNote, setNewNote] = useState({
-    Date: new Date().toLocaleString(),
+    date: new Date().toLocaleString(),
     symptom: "",
     severity: 0,
     medications: "",
@@ -15,7 +16,8 @@ const NotesComponent = ({ handleNotesSubmission }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    handleNotesSubmission(newNote);
+    
+    
   };
   const handleChange = (event) => {
     if (event.target.name === "severity") {
@@ -41,7 +43,7 @@ const NotesComponent = ({ handleNotesSubmission }) => {
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title" id="noteModalLabel">
-              Note
+              {strings.note}
             </h5>
             <button
               type="button"
@@ -52,42 +54,53 @@ const NotesComponent = ({ handleNotesSubmission }) => {
           </div>
           <div className="modal-body">
             <form className="notes-form" onSubmit={handleSubmit}>
-              <label htmlFor="symptom">Symptom</label>
+              <label htmlFor="symptom">{strings.symptom}</label>
               <input
                 type="text"
                 id="symptom"
                 name="symptom"
+                defaultValue={noteValues.symptom ? noteValues.symptom : ""}
                 onChange={handleChange}
               />
-              <label htmlFor="severity">Severity</label>
+              <label htmlFor="severity">{strings.severity}</label>
               <input
                 type="range"
                 min="1"
                 max="10"
-                defaultValue="1"
+                defaultValue={noteValues.severity ? noteValues.severity : 1}
                 name="severity"
                 id="Severity"
                 onChange={handleChange}
               />
-              <label htmlFor="severity">Value:{value}</label>
-              <label htmlFor="activities">Daily Activities</label>
+              <label htmlFor="severity">{strings.value}:{value}</label>
+              <label htmlFor="activities">{strings.dailyActivities}</label>
               <textarea
                 name="activities"
                 id="activities"
                 cols={30}
                 rows={10}
+                defaultValue = {noteValues.activities ? noteValues.activities : ""}
                 onChange={handleChange}
               ></textarea>
-              <label htmlFor="foods">Daily Food Tracker</label>
+              <label htmlFor="foods">{strings.dailyFood}</label>
               <textarea
                 name="foods"
                 id="foods"
                 cols={30}
                 rows={10}
-                defaultValue={""}
+                defaultValue={noteValues.foods ? noteValues.foods : ""}
                 onChange={handleChange}
               />
-              <input type="submit" value="New Entry" />
+               <label htmlFor="medications">{strings.medications}</label>
+              <textarea
+                name="medications"
+                id="medications"
+                cols={30}
+                rows={10}
+                defaultValue={noteValues.medications ? noteValues.medications : ""}
+                onChange={handleChange}
+              />
+              <input type="submit" value="Submit Note" />
             </form>
           </div>
         </div>

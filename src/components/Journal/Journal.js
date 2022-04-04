@@ -7,11 +7,11 @@ const JournalComponent = () => {
   const [lengthOfJournalEntries, setLengthOfJournalEntries] = useState(0);
   useEffect(async () => {
     //Retrieve all of the journal entries and set them to the state
-    const response = getJournalAPICall();
+    // const response = getJournalAPICall();
 
-    {
-      response && setManyJournalEntries(response.data);
-    }
+    // {
+    //   response && setManyJournalEntries(response.data);
+    // }
   }, [lengthOfJournalEntries]);
 
   const checkJournalEntriesLength = () => {};
@@ -41,7 +41,7 @@ const JournalComponent = () => {
                 data-bs-parent="#Accordion"
               >
                 <div className="accordion-body">
-                    <NotesList notes={item.notes}/>
+                   { item.notes ? <NotesList notes={item.notes} /> : <NotesList notes={undefined}/>}
                 </div>
               </div>
               <p>{convertDate(item.Date).year}</p>
