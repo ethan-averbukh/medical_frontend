@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router";
+
 import strings from './../../strings.json';
 
 const NotesComponent = ({noteValues}) => {
@@ -13,7 +13,6 @@ const NotesComponent = ({noteValues}) => {
     activities: "",
     foods: "",
   });
-  // const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
