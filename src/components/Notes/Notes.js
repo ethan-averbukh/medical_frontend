@@ -19,6 +19,9 @@ const NotesComponent = ({noteValues}) => {
     
     
   };
+  const handleNewSubmit = (event) => {
+      event.preventDefault();
+  }
   const handleChange = (event) => {
     if (event.target.name === "severity") {
       setValue(event.target.value);
@@ -53,7 +56,7 @@ const NotesComponent = ({noteValues}) => {
             ></button>
           </div>
           <div className="modal-body">
-            <form className="notes-form" onSubmit={handleSubmit}>
+            <form className="notes-form" onSubmit={noteValues ? handleSubmit : handleNewSubmit}>
               <label htmlFor="symptom">{strings.symptom}</label>
               <input
                 type="text"
