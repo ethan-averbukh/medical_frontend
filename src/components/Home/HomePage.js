@@ -1,6 +1,6 @@
 import NavBarComponent from "../Navigation/Navbar";
 import JournalComponent from "../Journal/Journal";
-
+import data from './../../journalData.json';
 
 const HomePageComponent = () => {
 
@@ -8,7 +8,7 @@ const HomePageComponent = () => {
   return (
     <div>
       <NavBarComponent />
-      <JournalComponent />
+      <JournalComponent journalEntry={data.journal}/>
     </div>
   );
 };
