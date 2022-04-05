@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { putJournalAPICall } from "../../apis/journalsAPI";
-import {postNotesAPICall} from './../../apis/notesAPI';
+
+import {getNotesByPropertyAPICall, postNotesAPICall} from './../../apis/notesAPI';
 import strings from "./../../strings.json";
 
 const NotesComponent = ({ noteValues, journal }) => {
   const [value, setValue] = useState(0);
+  const [notes, setNotes] = useState([]);
+  const [addedNotes,setAddedNotes] = useState(0);
   const [newNote, setNewNote] = useState({
     date: new Date().toLocaleString(),
     symptom: "",
@@ -13,17 +16,19 @@ const NotesComponent = ({ noteValues, journal }) => {
     activities: "",
     foods: "",
   });
-  let totalNotes = []
+
+  useEffect(async ()=>{
+    const retrievedNotes = await getNotesByPropertyAPICall(newNote.symptom);
+    setNotes(retrievedNotes.data)
+    
+    console.log(notes)
+  }, [addedNotes])
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    postNotesAPICall(newNote)
-    putJournalAPICall(journal, newNote)
+    postNotesAPICall(newNote);
   };
-  const handleNewSubmit = (event) => {
-    event.preventDefault();
-    postNotesAPICall(newNote)
-    putJournalAPICall(journal, newNote)
-  };
+ 
   const handleChange = (event) => {
     if (event.target.name === "severity") {
       setValue(event.target.value);
@@ -62,16 +67,13 @@ const NotesComponent = ({ noteValues, journal }) => {
             <div className="modal-body">
               <form
                 className="notes-form"
-                onSubmit={noteValues ? handleSubmit : handleNewSubmit}
+                onSubmit={handleSubmit}
               >
                 <label htmlFor="symptom">{strings.symptom}</label>
                 <input
                   type="text"
                   id="symptom"
                   name="symptom"
-                  defaultValue={
-                    noteValues ? noteValues.symptom : ""
-                  }
                   onChange={handleChange}
                 />
                 <label htmlFor="severity">{strings.severity}</label>
@@ -79,7 +81,7 @@ const NotesComponent = ({ noteValues, journal }) => {
                   type="range"
                   min="1"
                   max="10"
-                  defaultValue={noteValues ? noteValues.severity : 1}
+                  defaultValue={1}
                   name="severity"
                   id="Severity"
                   onChange={handleChange}
@@ -93,9 +95,6 @@ const NotesComponent = ({ noteValues, journal }) => {
                   id="activities"
                   cols={20}
                   rows={5}
-                  defaultValue={
-                    noteValues ? noteValues.activities : ""
-                  }
                   onChange={handleChange}
                 ></textarea>
                 <label htmlFor="foods">{strings.dailyFood}</label>
@@ -104,7 +103,6 @@ const NotesComponent = ({ noteValues, journal }) => {
                   id="foods"
                   cols={20}
                   rows={5}
-                  defaultValue={noteValues ? noteValues.foods : ""}
                   onChange={handleChange}
                 />
                 <label htmlFor="medications">{strings.medications}</label>
@@ -113,9 +111,6 @@ const NotesComponent = ({ noteValues, journal }) => {
                   id="medications"
                   cols={20}
                   rows={5}
-                  defaultValue={
-                    noteValues ? noteValues.medications : ""
-                  }
                   onChange={handleChange}
                 />
                 <input type="submit" data-bs-dismiss="modal" value="Submit Note" />
