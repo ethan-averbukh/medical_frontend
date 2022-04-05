@@ -3,9 +3,12 @@ import axios from 'axios';
 //Notes API Calls
 const getNotesAPICall = async() => {
     const notes = await axios.get("http://localhost:3000/Notes")
-    return notes
+    return notes;
 };
-
+const getNotesByPropertyAPICall = async (property) => {
+    const notes = await axios.get(`http://localhost:3000/Notes/${property}`);
+    return notes;
+}
 const postNotesAPICall = async(note) => {
     const newNote = await axios.post("http://localhost:3000/Notes", note)
 };
@@ -22,6 +25,7 @@ const patchNotesAPICall = async(note) => {
 
 export {
     getNotesAPICall,
+    getNotesByPropertyAPICall,
     patchNotesAPICall,
     postNotesAPICall,
     putNotesAPICall

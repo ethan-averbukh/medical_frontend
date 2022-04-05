@@ -29,6 +29,7 @@ const postJournalAPICall = async (journal) => {
 }
 
 const putJournalAPICall = async (journal, note) => {
+    console.log("AddedNote" ,note);
     const journalPost = await axios.put(`http://localhost:3000/Journals/${journal._id}`,
     {
         title: journal.title,
