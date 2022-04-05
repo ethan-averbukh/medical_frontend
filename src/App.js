@@ -4,6 +4,7 @@ import HomePageComponent from "./components/Home/HomePage";
 import IntroComponent from './components/Home/IntroductionPage';
 
 
+
 function App() {
   let journalEntry='';
   const journalNumbersUpdate = (journalTitle) => {
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
+        {/* <Route path="/" element={<Login />} /> */}
         <Route path="/" element={<IntroComponent handleJournalUpdate={journalNumbersUpdate}/>}/>
         <Route path="/home" element={<HomePageComponent journals={journalEntry}/>} />
       </Routes>
