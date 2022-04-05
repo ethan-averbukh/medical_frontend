@@ -5,13 +5,15 @@ import IntroComponent from './components/Home/IntroductionPage';
 
 
 function App() {
-
+  let journalEntry='';
+  const journalNumbersUpdate = (journalTitle) => {
+    journalEntry = journalTitle;
+  }
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<IntroComponent />}/>
-        <Route path="/intro" element={<IntroComponent />} />
-        <Route path="/home" element={<HomePageComponent />} />
+        <Route path="/" element={<IntroComponent handleJournalUpdate={journalNumbersUpdate}/>}/>
+        <Route path="/home" element={<HomePageComponent journals={journalEntry}/>} />
       </Routes>
     </div>
   );
