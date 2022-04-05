@@ -25,12 +25,16 @@
         
     }
     &-new-journal {
-        place-self: center;
+        justify-self: center;
+        align-self: end;
         text-align: center;
         grid-column: 3/4;
         grid-row: 4/5;
         display: flex;
         flex-direction: column;
+        & div .new-journal {
+            margin-top:10px;
+        }
     }
     @keyframes slide-left {
         from {
