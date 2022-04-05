@@ -1,13 +1,11 @@
-# **RateTheDoc**
+# **SymptomTracker**
 
 
 ## **Project Description**
-A web application for users to come and search for or post reviews on doctors in their area. 
+An online journal for users to track a medical issue. 
 
 ## **User Stories**
-User can come to the website immediately begin to search for a doctor based on doctor type and location. Information shown about a doctor will be: Wait Time, Bedside Manner, Time spent with patient, Problem resolved, and/or a brief comment.
-If the user wishes to leave a review they are able to create an account and post reviews about doctors already reviewed or create a brand new review about a doctor.
-A User who has created an account will then be able update, and delete their reviews as well.
+A personal journal for users to keep track of their daily activities when a medical symptom appears. User can create a journal for a particular issue, and begin to log daily notes about the type of symptom, severity, activities they took part in, foods they ate, etc.. User will be able to print or download their notes to send to their doctor or take to their doctor appointment
 
 ## **Project Schedule**
 
@@ -16,11 +14,11 @@ A User who has created an account will then be able update, and delete their rev
 | Day 1 | Complete Worksheet | Complete
 | Day 1 | Get reviewed and approved | Complete
 | Day 1 | Setup ReactJS Environment | Complete
-| Day 2 | Begin Component Structure | Incomplete
+| Day 2 | Begin Component Structure | Complete
 | Day 2 | Finish UI without submission handling | Incomplete
 | Day 3 | API's (GraphQL-Express) | Incomplete
 | Day 4 | API integration into submission handling | Incomplete
-| Day 4 | Backend Setup (MongoDB) | Incomplete
+| Day 4 | Backend Setup (MongoDB) | Complete
 | Day 5 | Testing | Incomplete
 | Day 5 | Testing | Incomplete
 | Day 6 | Testing | Incomplete
@@ -49,14 +47,15 @@ A User who has created an account will then be able update, and delete their rev
 | Day 4 | API integration into submission handling | 10 hr
 | Day 4 | Database | 8 hr
 | Day 1-6 | Testing | Unknown
+| Day 1-7 | Debugging | Unknown | All of it
 
 
 #### **PostMVP**
 
 - Improving User Experience by smoothing out responsiveness and design
 - User accounts
-- Increased Search filtration
-- 
+- Search filtration (By Journal, By Note)
+- Print Notes, Download Notes.
 
 ## **Functional Components**
 
@@ -65,7 +64,7 @@ A User who has created an account will then be able update, and delete their rev
 
 - Frontend: React-Bootstrap, Sass
 - API: Express, GraphQL
-- Backend: Mongoose
+- Backend: Mongoose, MongoDB
 
 ## **Code Snippets**
 
@@ -74,3 +73,4 @@ A User who has created an account will then be able update, and delete their rev
 
 
 ## **Issues and Resolutions**
+- A Cors issue took up the entire time trying to debug. The issue prevented me from being able to test any crud operations and caused rendering issues as well. Woke up one day, turned on my computer and the issue was gone. 
