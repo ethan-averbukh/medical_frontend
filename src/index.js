@@ -14,11 +14,7 @@ ReactDOM.render(
   <Router>
     <React.StrictMode>
       <App />
-      <Routes>
-        <Route path="/" element={<IntroComponent />}/>
-        <Route path="/intro" element={<IntroComponent />} />
-        <Route path="/home" element={<HomePageComponent />} />
-      </Routes>
+    
     </React.StrictMode>
   </Router>,
   document.getElementById("root")
