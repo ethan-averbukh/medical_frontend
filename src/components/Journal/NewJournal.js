@@ -4,18 +4,20 @@ import { useNavigate } from "react-router";
 import { postJournalAPICall } from "./../../apis/journalsAPI";
 import strings from './../../strings.json';
 
-const NewJournal = () => {
+const NewJournal = ({updateJournalNumbers}) => {
     const navigate = useNavigate();
     const [newJournal, setNewJournal] = useState({
         "title": "",
         "date": new Date().toDateString(),
         "notes": []
     })
-    const [noJournalEntryExists, setNoJournalEntryExists] = useState(true)
+    const [noJournalEntryExists, setNoJournalEntryExists] = useState(true);
     const handleSubmit = (event) => {
         event.preventDefault();
+        console.log(newJournal);
         postJournalAPICall(newJournal);
         setNoJournalEntryExists(false);
+        updateJournalNumbers(newJournal.title);
         navigate('/home')
     }
     const handleChange = (event) => {
@@ -31,7 +33,7 @@ const NewJournal = () => {
 
   return (
     <div>
-        {noJournalEntryExists && <div className='intro-no-jrnls'>{strings.noJournalEntries}</div>}
+        <div className='intro-no-jrnls'>{strings.createJournal}</div>
         <button type="button" className="btn btn-primary new-journal" data-bs-toggle="modal" data-bs-target="#journalModal">{strings.newJournal}</button> 
         <div className="modal fade" id="journalModal" tabIndex={-1} aria-labelledby="journalModalLabel" aria-hidden={true}>
             <div className="modal-dialog modal-dialog-centered">
