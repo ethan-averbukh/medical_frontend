@@ -2,7 +2,7 @@ import  NewJournal  from "./../Journal/NewJournal";
 import GoToJournals from "./../Journal/GoToJournals";
 import strings from './../../strings.json';
 
-const IntroComponent = () => {
+const IntroComponent = ({handleJournalUpdate}) => {
     return (
         <div className='intro'>
             
@@ -11,7 +11,7 @@ const IntroComponent = () => {
                 <p>{strings.introStatement}</p>
             </div> 
             <div className="intro-new-journal">
-                <NewJournal />
+                <NewJournal updateJournalNumbers={handleJournalUpdate}/>
             </div>
             <div className="intro-goto-journals">
                 <GoToJournals />
