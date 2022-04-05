@@ -1,6 +1,5 @@
 {
   "name": "medical_frontend",
-  "homepage": "https://ethan-averbukh.github.io/medical_frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
