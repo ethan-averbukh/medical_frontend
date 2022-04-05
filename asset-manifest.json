@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/medical_frontend/static/css/main.31f6b5a5.css",
-    "main.js": "/medical_frontend/static/js/main.1d526ed6.js",
+    "main.js": "/medical_frontend/static/js/main.6d8b3fa4.js",
     "index.html": "/medical_frontend/index.html",
     "main.31f6b5a5.css.map": "/medical_frontend/static/css/main.31f6b5a5.css.map",
-    "main.1d526ed6.js.map": "/medical_frontend/static/js/main.1d526ed6.js.map"
+    "main.6d8b3fa4.js.map": "/medical_frontend/static/js/main.6d8b3fa4.js.map"
   },
   "entrypoints": [
     "static/css/main.31f6b5a5.css",
-    "static/js/main.1d526ed6.js"
+    "static/js/main.6d8b3fa4.js"
   ]
 }
