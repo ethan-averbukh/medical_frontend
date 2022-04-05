@@ -11,12 +11,10 @@ const NewJournal = ({updateJournalNumbers}) => {
         "date": new Date().toDateString(),
         "notes": []
     })
-    const [noJournalEntryExists, setNoJournalEntryExists] = useState(true);
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(newJournal);
         postJournalAPICall(newJournal);
-        setNoJournalEntryExists(false);
         updateJournalNumbers(newJournal.title);
         navigate('/home')
     }

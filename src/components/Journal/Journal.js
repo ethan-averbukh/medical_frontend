@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import {
   deleteJournalAPICall,
   getJournalAPICall,
+  putJournalAPICall,
 } from "./../../apis/journalsAPI";
 import NotesList from "../Notes/createNotes";
 const JournalComponent = ({ totalJournals }) => {
@@ -17,11 +18,13 @@ const JournalComponent = ({ totalJournals }) => {
   const handleDelete = (itemID) => {
     deleteJournalAPICall(itemID);
   };
+  const handleTitleEdit = (itemID) => {
+    putJournalAPICall(itemID)
+  }
   return (
     <div className="accordion" id="Accordion">
       {manyJournalEntries.data &&
         manyJournalEntries.data.map((item, index) => {
-          console.log(item._id);
           return (
             <div className="accordion-item " key={item._id}>
               <h2 className="accordion-header" id={`Journal${index}`}>
@@ -44,6 +47,14 @@ const JournalComponent = ({ totalJournals }) => {
                   >
                     Delete
                   </div>
+                  <div
+                  id="Edit"
+                  className="btn btn-warning"
+                  onClick={()=>{
+                    handleTitleEdit(item._id)
+                  }}>
+                    Edit Title
+                  </div>
                 </button>
               </h2>
               <div
@@ -54,7 +65,7 @@ const JournalComponent = ({ totalJournals }) => {
               >
                 <div className="accordion-body">
                   {item.notes.length ? (
-                    <NotesList notes={item.notes} journal={item}/>
+                    <NotesList journal={item}/>
                   ) : (
                     <NotesList notes={[]} journal={item}/>
                   )}
