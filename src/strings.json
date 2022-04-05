@@ -10,6 +10,7 @@
   "introTitle": "Welcome to the Symptom Tracker.",
   "journalsHeader": "Journals",
   "journalTitle": "Journal Title:",
+  "logout": "You have been successfully logged out! Come back Soon!",
   "medications": "Medications",
   "newJournal": "New Journal",
   "noJournalEntries": "You currently have no journal entries, click the button to create one.",
