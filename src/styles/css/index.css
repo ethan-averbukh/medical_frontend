@@ -11,6 +11,7 @@
 .intro {
   display: grid;
   grid-template: repeat(4, 1fr)/repeat(3, 1fr);
+  margin-top: 100px;
 }
 .intro-title {
   grid-column: 1/4;
@@ -68,6 +69,22 @@
 #Delete {
   margin-left: 10px;
   font-size: 0.7rem;
+}
+
+#Edit {
+  margin-left: 10px;
+  font-size: 0.7rem;
+}
+
+.login {
+  height: 100vh;
+  display: grid;
+  grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+}
+.login button {
+  height: 20%;
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
 
 .notes-form {

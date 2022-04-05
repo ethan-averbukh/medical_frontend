@@ -2,7 +2,7 @@
 .intro {
     display: grid;
     grid-template: repeat(4, 1fr) / repeat(3,1fr);
-    
+    margin-top: 100px;
     &-title {
         grid-column: 1/4;
         grid-row: 1/2;
